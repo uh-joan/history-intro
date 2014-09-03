@@ -12,25 +12,25 @@ Here some pictures of the introduction
 
 ## How to use
 
-The two main directives are ng-intro-options and ng-intro-method.
+The two main directives are `ng-intro-options` and `ng-intro-method`.
 
 ###Setting Options
 
-<pre> ng-intro-options="IntroOptions" </pre>
+`ng-intro-options="IntroOptions"`
 
-Create a $scope.IntroOptions in your controller which contains the intro.js options. The options are exactly the same as the original. This also allows you to modify the options as part of your controller behavior if necessary. You don't have to use IntroOptions, you can specify some other name.
+Create a `$scope.IntroOptions` in your controller which contains the intro.js options. This also allows you to modify the options as part of your controller behavior if necessary.
 
 ###Start method
 
-ng-intro-method="CallMe"
+`ng-intro-method="CallMe"`
 
-The directive will create a method on $scope.CallMe so that you can invoke it yourself later. Make sure the there isn't a method CallMe already in your controller. You don't have to use CallMe, you can specify some other name.
+The directive will create a method on `$scope.CallMe` so that you can invoke it yourself later. Make sure the there isn't a method `CallMe` already in your controller. You don't have to use `CallMe`, you can specify some other name.
 
 ###Call the start method
 
 You can invoke it from an event such a click,
 
-ng-click="CallMe();"
+`ng-click="CallMe();"`
 
 
 ##It uses:
