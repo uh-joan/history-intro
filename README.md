@@ -4,6 +4,12 @@ Introduction/presentation for the Angular-based history of events <a href="https
 
 Takes the user through a step-by-step guide on how to use the memory visualization.
 
+## Keyboard + Mouse navigation
+
+Ability to navigate with the mouse, or the keyboard - ←, →, ENTER and ESC to exit.
+
+=====
+
 Here some pictures of the introduction
 
 <img src="https://github.com/uh-joan/history-intro/blob/master/app/images/overall01.png">
