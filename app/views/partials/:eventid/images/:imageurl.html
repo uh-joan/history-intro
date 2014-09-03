@@ -1,0 +1,24 @@
+<head>
+    <meta name="viewport" content="width=device-width">
+</head>
+<div class="container" ng-intro-options="IntroOptions" ng-intro-method="CallMe">
+    <div class="row-fluid">
+        <p><a class="btn btn-large btn-success" ng-click="CallMe();">Finish the introduction</a></p>
+        <div class="col-md-2">
+
+            </br></br></br></br></br></br></br></br></br>
+            <p id="step5" ng-click="goback(eventId2Show)"><img ng-src="images/back03.png" width="50"></p>
+            </select-->
+        </div>
+
+        <div id="step1" class="col-md-8">
+
+            <div ng-repeat="eps in img.episodes | filter:{eventId : eventId2Show}">
+                <div ng-repeat="event in eps.events | filter:{imageUrl : img2Show}">
+                    <p style="font-size:25px"><b> <span id="step2"> {{event.name}} </span> on <span id="step3">{{event.time.real}}</span></b></p>
+                    <div id="step4" ng-click="goback(eventId2Show)" align="center"><img ng-src="{{event.imageUrl}}.png" width="680"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

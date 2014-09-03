@@ -1,0 +1,62 @@
+<!--div ng-include="'partials/navbar'"></div>
+
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+</div>
+
+<div class="row marketing">
+  <div ng-repeat="thing in awesomeThings">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div-->
+
+<div class="container" ng-intro-options="IntroOptions" ng-intro-method="CallMe" ><!-- was class="container-fluid"-->
+
+    <h1 id="step1" align="center">Care-O-bot Memory Visualization</h1>
+    <p align="center">Introduction for visualizing the memory of the robot websites and features with a step-by-step guide.</p>
+    <p align="center"><a class="btn btn-large btn-success" ng-click="CallMe();">Start the introduction</a></p>
+    <div class="row-fluid">
+        <div id="step6" class="col-md-2">
+            <!--Sidebar content-->
+
+            <b>>Sort by</b></br>
+            <select class="selectpicker" ng-model="orderEpisodes">
+                <!--option value="location">Location</option>
+                <option value="name">Rule</option-->
+                <option value="location">Location</option>
+                <option value="-endTime">Newest</option>
+                <option value="endTime">Oldest</option>
+            </select>
+
+            <!--/br><b>>Show</b></br>
+            <select class="span9"  ng-model="statusquery.tags">
+                <option value="">All</option>
+                <option ng-repeat="item in tagsItems" value="{{item.value}}">{{item.label}}</option>
+            </select-->
+
+        </div>
+
+        <div id="step2" class="col-md-8">
+            <ul class="episodes" ng-click="go(ep.eventId)" ng-repeat="ep in episodes.episodes | orderBy:orderEpisodes">
+                <li id="step7" class="thumbnail">
+
+                    <a class="thumb"><img ng-src="{{ep.imageArt}}"></a>
+                    <p id="step3"> <b>{{ep.scenario}}</b></p>
+                    <p id="step4">{{ep.shortDescription}}</p>
+                    <p id="step5">{{ep.whentime}}</p>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<head>
+    <meta name="viewport" content="width=device-width">
+</head>
+<div class="container" ng-intro-options="IntroOptions" ng-intro-method="CallMe">
+    <!--h1 align="center">Care-O-bot Memory Visualization</h1-->
+    <div class="row-fluid">
+        <div class="col-md-2">
+            </br></br></br></br></br></br></br></br></br>
+            <div id="step6"><img  ng-click="goback()" ng-src="images/back03.png" width="50"></div>
+            <!--/br></br></br></br><b>>Search by</b></br>
+            <input class="span9" type="text" ng-click="clearEventQuery()" ng-model="eventquery.name" bs-typeahead="ruleName" placeholder="Name (e.g. drink)"></br>
+
+            <input class="span9" type="text" ng-click="clearLocationQuery()" ng-model="locationquery.location" bs-typeahead="locationName" placeholder="Location (e.g. sofa)"></br>
+
+            <b>>Sort by</b></br>
+            <select class="span9" ng-model="orderProp">
+              <option value="location">Location</option>
+              <option value="name">Rule</option>
+              <option value="-time.narrative">Newest</option>
+              <option value="time.narrative">Oldest</option>
+            </select>
+
+            </br><b>>Show</b></br>
+            <select class="span9" ng-model="statusquery.tags">
+                <option value="">All</option>
+                <option ng-repeat="item in tagsItems" value="{{item.value}}">{{item.label}}</option>
+            </select-->
+        </div>
+
+        <div class="col-md-10">
+            <a class="btn btn-large btn-success" ng-click="CallMe();">Continue with the introduction</a>
+            <div class="container-fluid" id="step1">
+                <div ng-repeat="eps in episodes.episodes | filter:{eventId : eventId2Show}">
+                        <h1 id="step2" align="center" >{{eps.scenario}} </h1>
+                        <h5 id="step3" >{{eps.whentime}}</h5></br>
+                        <p id="step4" style="font-size:x-large" >{{eps.description}}</p></br>
+                        <div class="container-fluid" id="step5">
+                            <div ng-click="go2(event.imageUrl)" ng-repeat="event in eps.events" class="inner">
+                                <p id="step7" align="center" data-ng-init="loadLocationName(event.location)"><img ng-src="{{event.imageThUrl}}"><img ng-src="images/next.png"></p>
+                                <p align="center" style="font-size:16px" data-ng-init="loadRuleName(event.name)" ><b> {{event.name}}</b></p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
