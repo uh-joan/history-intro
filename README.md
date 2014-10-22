@@ -1,6 +1,6 @@
 # history-intro
 
-Introduction/presentation for the Angular-based history of events <a href="https://github.com/uh-joan/historyUI/blob/master/README.md">historyUI</a>. 
+This is an introduction/presentation for the Angular-based history of events <a href="https://github.com/uh-joan/historyUI/blob/master/README.md">historyUI</a>. 
 
 Takes the user through a step-by-step guide on how to use the memory visualization.
 
